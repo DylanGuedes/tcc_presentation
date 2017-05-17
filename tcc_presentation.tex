@@ -25,11 +25,50 @@
   \input{slides/11}
 
   \begin{frame}
+      \frametitle{Arquitetura Kappa}
+      \begin{itemize}
+          \item Utiliza somente processamento \textit{streaming}.
+          \item Utiliza a retenção do log para uso de dados históricos.
+          \item Baixa latência.
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+      \frametitle{Análise de Ferramentas}
+      \begin{itemize}
+          \item Análise de ferramentas de processamento streaming e batch.
+          \item Análise de broker.
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+      \frametitle{Processamento batch - MapReduce vs Spark}
+      \begin{itemize}
+          \item MapReduce tem latência bem maior que o Spark.
+          \item Spark apresenta biblioteca de ML.
+          \item Spark pode ser usado como processamento streaming.
+          \item Hadoop permite uso de qualquer linguagem que possua interação
+              com i/o do SO.
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+      \frametitle{Processamento streaming - Spark vs Storm}
+      \begin{itemize}
+          \item Storm apresenta menor latência que o Spark.
+          \item Abordagens diferentes - Spark usa micro-batch, Storm utiliza
+              streaming.
+          \item Spark pode ser usado para processamento batch.
+          \item Spark dispõe de biblioteca de ML.
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}
       \frametitle{Novo serviço de processamento}
       \begin{itemize}
-          \item Utilização da Arquitetura Kappa;
-          \item Apache Spark para processamento \textit{streaming};
-          \item Apache Kafka como \textit{broker}.
+          \item<2-> Utilização da \textbf{Arquitetura Kappa}.
+          \item<3-> \textbf{Apache Spark} para processamento \textit{streaming};
+          \item<4-> \textbf{Apache Kafka} como \textit{broker}.
       \end{itemize}
   \end{frame}
 
