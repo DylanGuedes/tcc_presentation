@@ -1,0 +1,12 @@
+\begin{frame}
+    \frametitle{Arquitetura Lambda}
+    \begin{itemize}
+        \item Separação em camadas \textbf{\textit{streaming}} e
+            \textbf{\textit{batch}};
+        \item Camada \textit{batch} faz o processamento a todo o tempo, mas
+            apresenta alta latência;
+        \item Camada \textit{speed} faz o processamento como complemento aos
+            dados não levados em conta pela \textit{batch};
+        \item Soma entre os resultados das duas camadas.
+    \end{itemize}
+\end{frame}

@@ -18,4 +18,100 @@
   \input{slides/4}
   \input{slides/5}
   \input{slides/6}
+  \input{slides/7}
+  \input{slides/8}
+  \input{slides/9}
+  \input{slides/10}
+  \input{slides/11}
+
+  \begin{frame}
+      \frametitle{Novo serviço de processamento}
+      \begin{itemize}
+          \item Utilização da Arquitetura Kappa;
+          \item Apache Spark para processamento \textit{streaming};
+          \item Apache Kafka como \textit{broker}.
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+      \frametitle{Arquitetura Kappa}
+      \begin{itemize}
+          \item Complexidade da Arquitetura Lambda;
+          \item Melhor adoção para o time do InterSCity.
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+      \frametitle{Apache Spark}
+      \begin{itemize}
+          \item Biblioteca de ML nativa;
+          \item Poder utilizar Python;
+          \item Fácil troca para a Arquitetura Lambda.
+              \begin{figure}
+                  \includegraphics[scale=0.3]{figures/spark_logo.png}
+              \end{figure}
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+      \frametitle{Apache Kafka}
+      \begin{itemize}
+          \item Ajuda na implementação da Arquitetura Kappa;
+          \item Produtor nativo para o Spark Streaming;
+          \item Utilização somente no processamento de dados.
+              \begin{figure}
+                  \includegraphics[scale=0.3]{figures/kafka_logo.png}
+              \end{figure}
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+      \frametitle{Implementação}
+      \begin{itemize}
+          \item Divisão em três etapas:
+              \begin{itemize}
+                  \item Configuração do ambiente;
+                  \item Interoperabilidade entre os serviços;
+                  \item Possibilidade de extender o processamento de uma forma customizável.
+              \end{itemize}
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+      \frametitle{Shock}
+      \begin{itemize}
+          \item Aplicação que abstrai o uso do Shock e o Kafka;
+          \item Faz parte do novo serviço de processamento de dados;
+          \item Carrega novas operações para o pipeline de dados via Kafka;
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+      \frametitle{Ciclo básico do Shock}
+          \begin{figure}
+              \includegraphics[scale=0.3]{figures/shock.png}
+          \end{figure}
+  \end{frame}
+
+  \begin{frame}
+      \frametitle{Contribuições}
+      \begin{itemize}
+          \item Novo serviço de processamento
+          \item Aplicação que abstrai outras ferramentas, e que é extensível
+          \item Possibilidade de uso de algoritmos sofisticados
+          \item Possibilidade de atuação em cenários mais extremos
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+      \frametitle{Próximos passos}
+      \begin{itemize}
+          \item Segunda rodada de revisão na bibliografia
+          \item Desacoplar o núcleo do Shock do Kafka
+          \item Testar o núcleo do Shock
+          \item Documentar a API de serviços
+          \item Disponibilizar customização de janelas de micro-batch
+          \item Utilizar recuperação de dados históricos através dos logs do Kafka
+      \end{itemize}
+  \end{frame}
 \end{document}
