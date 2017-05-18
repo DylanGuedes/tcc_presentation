@@ -12,38 +12,168 @@
 \date{\today}
 
 \begin{document}
-  \input{slides/1}
-  \input{slides/2}
-  \input{slides/3}
-  \input{slides/4}
-  \input{slides/5}
-  \input{slides/6}
-  \input{slides/7}
-  \input{slides/8}
-  \input{slides/9}
-  \input{slides/10}
-  \input{slides/11}
+    \begin{frame}
+        \titlepage
+        Orientador: Prof. Dr. Paulo Roberto Miranda Meirelles
+        Co-orientador: Arthur de Moura Del Esposte
+    \end{frame}
 
-  \begin{frame}
-      \frametitle{Arquitetura Kappa}
-      \begin{figure}
-          \includegraphics[scale=0.4]{figures/KappaArchitecture.png}
-          \caption{Arquitetura Kappa. Fonte: Sony Ericsson.}
-      \end{figure}
-      \begin{itemize}
-          \item Utiliza somente processamento \textit{streaming}.
-          \item Utiliza a retenção do log para uso de dados históricos.
-          \item Baixa latência.
-      \end{itemize}
-  \end{frame}
-  
-  \begin{frame}
-      \frametitle{Lambda vs Kappa}
-      \begin{itemize}
-          \item Lambda é mais complexa.
-          \item Kappa não pode ser utilizada em certos contextos.
-      \end{itemize}
-  \end{frame}
+    \begin{frame}
+        \frametitle{Cidades inteligentes}
+
+        \begin{itemize}
+            \item \textbf{Cidades inteligentes} podem ser definidas como a
+                utilização de tecnologias da informação e comunicação para
+                melhorar a vida da população;
+
+            \item \textbf{Plataformas de cidades inteligentes} ajudam aplicações
+                a serem desenvolvidas, fornecendo serviços;
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Iniciativas ocorrendo}
+        \begin{itemize}
+            \item Na Espanha, a plataforma \textbf{SmartSantander} é utilizada
+                por diversas aplicações de cidades inteligentes;
+
+                \begin{figure}
+                    \includegraphics[scale=0.2]{figures/sen2soc.png}
+                    \caption{Aplicativo Sen2Soc, que utiliza o SmartSantander.}
+                \end{figure}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Iniciativas ocorrendo}
+        \begin{itemize}
+            \item Na Holanda, através da plataforma \textbf{Amsterdam Smart City},
+                aplicações de cidades inteligentes são divulgadas.
+
+            \begin{figure}
+                \includegraphics[scale=0.25]{figures/asc.png}
+                \caption{Plataforma Amsterdam Smart City (ASC).}
+            \end{figure}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Problemas nas soluções atuais}
+        \begin{itemize}
+            \item Desafios técnicos continuam em aberto;
+            \item Soluções específicas, não promovem a interoperabilidade.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Surgimento do InterSCity}
+        \begin{itemize}
+            \item Plataforma que se preocupe com os problemas de interoperabilidade;
+            \item Suporte ao desenvolvimento de aplicações de cidades inteligentes;
+            \item Arquitetura baseada em microsserviços.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Características do InterSCity}
+        \begin{itemize}
+            \item Licenciado sob MPLv2;
+            \item Arquitetura de microsserviços (MSA);
+            \item Maior parte em Ruby on Rails
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Arquitetura do InterSCity}
+        \begin{itemize}
+            \item Microsserviços conversam utilizando REST e passagem de mensagem;
+            \item Passagem de mensagem feita com RabbitMQ.
+                \begin{figure}
+                    \includegraphics[scale=0.3]{figures/communication.png}
+                    \caption{Comunicação utilizando REST e passagem de mensagem.}
+                \end{figure}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Arquitetura do InterSCity}
+        \begin{figure}
+            \includegraphics[scale=0.3]{figures/interscity_architecture.png}
+            \caption{Microsserviços e arquitetura do InterSCity. Fonte: Del Esposte, 2017.}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Processamento de dados do InterSCity}
+        \begin{itemize}
+            \item<2-> Não se encontra em um cenário ideal;
+            \item<3-> Muitos recursos IoT enviando dados continuamente podem ser um
+                problema no estado atual.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Objetivos}
+        \begin{itemize}
+            \item Novo serviço de processamento de dados para o InterSCity.
+            \item Permitir que o InterSCity atue em cenários de maior massa de dados.
+            \item Facilitar o uso de algoritmos mais complexos.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Processamento de Dados}
+        \begin{itemize}
+            \item Cidades inteligentes precisam dos três V's para certos cenários:
+                \begin{itemize}
+                    \item Volume
+                    \item Velocidade
+                    \item Variedade
+                \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Ferramenta chave - Big Data}
+        \begin{itemize}
+            \item Ferramentas específicas para cenários de larga escala de dados.
+            \item Análise de dois padrões de projeto - Arquitetura Lambda e Arquitetura Kappa.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Arquitetura Lambda}
+        \begin{figure}
+            \includegraphics[scale=0.3]{figures/LambdaArchitecture.png}
+            \caption{Arquitetura Lambda. Fonte: Sony Ericsson.}
+        \end{figure}
+        \begin{itemize}
+            \item Separação em camadas \textbf{\textit{streaming}} e
+                \textbf{\textit{batch}};
+            \item Isolação de complexidade.
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Arquitetura Kappa}
+        \begin{figure}
+            \includegraphics[scale=0.4]{figures/KappaArchitecture.png}
+            \caption{Arquitetura Kappa. Fonte: Sony Ericsson.}
+        \end{figure}
+        \begin{itemize}
+            \item Utiliza somente processamento \textit{streaming}.
+            \item Utiliza a retenção do log para uso de dados históricos.
+            \item Baixa latência.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Lambda vs Kappa}
+        \begin{itemize}
+            \item Lambda é mais complexa.
+            \item Kappa não pode ser utilizada em certos contextos.
+        \end{itemize}
+    \end{frame}
 
   \begin{frame}
       \frametitle{Análise de Ferramentas}
