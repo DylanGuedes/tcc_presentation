@@ -26,10 +26,22 @@
 
   \begin{frame}
       \frametitle{Arquitetura Kappa}
+      \begin{figure}
+          \includegraphics[scale=0.4]{figures/KappaArchitecture.png}
+          \caption{Arquitetura Kappa. Fonte: Sony Ericsson.}
+      \end{figure}
       \begin{itemize}
           \item Utiliza somente processamento \textit{streaming}.
           \item Utiliza a retenção do log para uso de dados históricos.
           \item Baixa latência.
+      \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+      \frametitle{Lambda vs Kappa}
+      \begin{itemize}
+          \item Lambda é mais complexa.
+          \item Kappa não pode ser utilizada em certos contextos.
       \end{itemize}
   \end{frame}
 
@@ -43,34 +55,46 @@
 
   \begin{frame}
       \frametitle{Processamento batch - MapReduce vs Spark}
+      \begin{figure}
+          \includegraphics[scale=0.3]{figures/BatchProcessing.png}
+      \end{figure}
       \begin{itemize}
-          \item MapReduce tem latência bem maior que o Spark.
-          \item Spark apresenta biblioteca de ML.
-          \item Spark pode ser usado como processamento streaming.
-          \item Hadoop permite uso de qualquer linguagem que possua interação
-              com i/o do SO.
+          \item MapReduce permite uso de qualquer linguagem que possua interação
+              com I/O padrão.
+          \item Spark apresenta latência bem menor que o MapReduce.
+          \item Spark dispõe de biblioteca de ML.
+          \item Spark pode ser usado como processamento \textit{streaming}.
       \end{itemize}
   \end{frame}
 
   \begin{frame}
       \frametitle{Processamento streaming - Spark vs Storm}
+      \begin{figure}
+          \includegraphics[scale=0.6]{figures/StreamingProcessing.png}
+      \end{figure}
       \begin{itemize}
           \item Storm apresenta menor latência que o Spark.
-          \item Abordagens diferentes - Spark usa micro-batch, Storm utiliza
-              streaming.
-          \item Spark pode ser usado para processamento batch.
+          \item Storm pode ser utilizando com qualquer linguagem que possua
+              interação com I/O padrão.
+          \item Abordagens diferentes - Spark usa \textit{micro-batch}, Storm utiliza
+              \textit{streaming}.
+          \item Spark pode ser usado para processamento \textit{batch}.
           \item Spark dispõe de biblioteca de ML.
       \end{itemize}
   \end{frame}
 
   \begin{frame}
       \frametitle{Broker - Kafka vs RabbitMQ}
+      \begin{figure}
+          \includegraphics[scale=0.3]{figures/Brokers.png}
+      \end{figure}
       \begin{itemize}
           \item RabbitMQ já é utilizado pelo InterSCity.
+          \item RabbitMQ dispõe de \textit{plugins} para estender as funcionalidades.
+          \item RabbitMQ permite a utilização de filas e tópicos mais complexos.
           \item Kafka apresenta performance superior.
           \item Kafka tem integração nativa com o Spark.
-          \item RabbitMQ dispõe de plugins para extender as funcionalidades.
-          \item RabbitMQ permite a utilização de filas e tópicos mais complexos.
+          \item Kafka armazena o \textit{log}.
       \end{itemize}
   \end{frame}
 
@@ -85,8 +109,11 @@
 
   \begin{frame}
       \frametitle{Arquitetura Kappa}
+      \begin{figure}
+          \includegraphics[scale=0.4]{figures/KappaArchitecture.png}
+      \end{figure}
       \begin{itemize}
-          \item Complexidade da Arquitetura Lambda;
+          \item Complexidade da Arquitetura Lambda.
           \item Melhor adoção para o time do InterSCity.
       \end{itemize}
   \end{frame}
@@ -122,7 +149,7 @@
               \begin{itemize}
                   \item Configuração do ambiente;
                   \item Interoperabilidade entre os serviços;
-                  \item Possibilidade de extender o processamento de uma forma customizável.
+                  \item Possibilidade de estender o processamento de uma forma customizável.
               \end{itemize}
       \end{itemize}
   \end{frame}
