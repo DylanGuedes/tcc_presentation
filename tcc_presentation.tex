@@ -64,6 +64,17 @@
   \end{frame}
 
   \begin{frame}
+      \frametitle{Broker - Kafka vs RabbitMQ}
+      \begin{itemize}
+          \item RabbitMQ já é utilizado pelo InterSCity.
+          \item Kafka apresenta performance superior.
+          \item Kafka tem integração nativa com o Spark.
+          \item RabbitMQ dispõe de plugins para extender as funcionalidades.
+          \item RabbitMQ permite a utilização de filas e tópicos mais complexos.
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}
       \frametitle{Novo serviço de processamento}
       \begin{itemize}
           \item<2-> Utilização da \textbf{Arquitetura Kappa}.
@@ -119,7 +130,7 @@
   \begin{frame}
       \frametitle{Shock}
       \begin{itemize}
-          \item Aplicação que abstrai o uso do Shock e o Kafka;
+          \item Aplicação que abstrai o uso do Spark e do Kafka;
           \item Faz parte do novo serviço de processamento de dados;
           \item Carrega novas operações para o pipeline de dados via Kafka;
       \end{itemize}
@@ -159,7 +170,7 @@
       \begin{itemize}
           \item Utilizar outras estruturas de dados (não só RDD's).
           \item Uso de check-points.
-          \item Recuperar log do Kafka.
+          \item Múltiplos streams.
       \end{itemize}
   \end{frame}
 \end{document}
